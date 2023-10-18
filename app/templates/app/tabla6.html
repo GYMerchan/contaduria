@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PROYECTO</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        {% load static %}
+		<link rel="stylesheet" href="{% static 'app/css/tablas.css' %}" />
+		<link rel="stylesheet" href="{% static 'app/css/noscript.css' %}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+        <div id="wrapper">
+                <header id="header">
+                </header>
+				<!-- Main -->
+                    <article id="intro">
+                        <h2 class="major">Impuesto Diferido</h2>
+                        <section>
+                            <h3 class="major">Activo por Derecho de Uso .........................Pasivo por Arrendamiento </h3>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Periodo</th>
+                                                <th>Valor</th>
+                                                <th>Depreciación</th>
+                                                <th>Saldo neto en libros</th>
+                                                <th>Impuesto diferido</th>
+                                                <td class="divider"></td>
+                                                <th>Periodo</th>
+                                                <th>Valor</th>
+                                                <th>Amortización</th>
+                                                <th>Saldo neto en libros</th>
+                                                <th>Impuesto diferido</th>
+                                                <td class="divider"></td>
+                                                <th>Diferencia temporarea Neta </th>
+                                                <td class="divider"></td>
+                                                <th>Diferencia Impuesto Diferido Neto</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>0</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td class="format-number">{{ impuesto_diferido_1 }}</td>
+                                                <td class="divider"></td>
+                                                <td>0</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td class="format-number">{{ impuesto_diferido_1 }}</td>
+                                                <td class="divider"></td>
+                                                <td>-</td>
+                                                <td class="divider"></td>
+                                                <td>-</td>
+                                            </tr>
+                                            {% for amortizacion in amortizacion_data %}
+                                            <tr>
+                                                <td>{{ amortizacion.periodo }}</td>
+                                                <td class="format-number">{{ amortizacion.valor_activo }}</td>
+                                                <td class="format-number">{{ amortizacion.depreciacion|floatformat:2 }}</td>
+                                                <td class="format-number">{{ amortizacion.saldo_neto_activo|floatformat:2 }}</td>
+                                                <td class="format-number">{{ amortizacion.impuesto_diferido_activo|floatformat:2 }}</td>
+                                                <td class="divider"></td>
+
+                                                <td>{{ amortizacion.periodo }}</td>
+                                                <td class="format-number">{{ amortizacion.valor_pasivo|floatformat:2  }}</td>
+                                                <td class="format-number">{{ amortizacion.amortizacion|floatformat:2 }}</td>
+                                                <td class="format-number">{{ amortizacion.saldo_neto_pasivo|floatformat:2 }}</td>
+                                                <td class="format-number">{{ amortizacion.impuesto_diferido_pasivo|floatformat:2 }}</td>
+                                                <td class="divider"></td>
+                                                <td class="format-number">{{ amortizacion.dif_temp_neta|floatformat:2 }}</td>
+                                                <td class="divider"></td>
+                                                <td class="format-number">{{ amortizacion.dif_imp_dif_neto|floatformat:2 }}</td>
+
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </section>
+                        <div style="text-align: center;">
+                            <button><a href="/aplicativo/">Calcular de Nuevo</a></button>
+                            <button><a href="/">Volver al Inicio</a></button>
+                            <button><a href="javascript:history.back()">Volver atrás</a></button>
+            
+                        </div>
+                    </article>
+                    <br>
+				<!-- Footer -->
+                <footer id="footer">
+                    <img src="{% static 'app/images/footer_corregir.png' %}"/>
+                </footer>
+        </div>			  
+
+            
+		<!-- BG -->
+			<!-- <div id="bg"></div> -->
+
+		<!-- Scripts -->
+			<script src="{% static 'app/js/jquery.min.js' %}"></script>
+			<script src="{% static 'app/js/browser.min.js' %}"></script>
+			<script src="{% static 'app/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'app/js/util.js' %}"></script>
+			<script src="{% static 'app/js/main.js' %}"></script>
+			<script src="{% static 'app/js/tablas.js' %}"></script>
+
+            
+	</body>
+</html>

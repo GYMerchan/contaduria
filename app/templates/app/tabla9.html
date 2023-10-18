@@ -1,0 +1,295 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PROYECTO</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        {% load static %}
+		<link rel="stylesheet" href="{% static 'app/css/tablas.css' %}" />
+		<link rel="stylesheet" href="{% static 'app/css/noscript.css' %}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+        <div id="wrapper">
+                <header id="header">
+                </header>
+				<!-- Main -->
+                    <article id="intro">
+                        <h2 class="major">Estados Financieros de la NIIF 16</h2>
+                        <section>
+                            <h3 class="major">Balance de prueba y Estado de Situación Financiera</h3>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><em></em></th>
+                                                <th><em>Balance de Prueba</em></th>
+                                                <th><em></em></th>
+                                                <th class="divider"></th>
+                                                <th><em>Estado de Situación Financiera</em></th>
+                                            </tr>
+                                            <tr>
+                                                <th><em>Cuenta</em></th>
+                                                <th><em>Debe</em></th>
+                                                <th><em>Haber</em></th>
+                                                <th class="divider"></th>
+                                                <th><em>Valores</em></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td><strong>Activo</strong></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Efectivo</td>
+                                                <td>-</td>
+                                                <td class="format-number">{{ efectivo }}</td>
+                                                <td class="divider"></td>
+                                                <td class="format-number">{{ efectivo_sit_financiera }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Activo en uso</td>
+                                                <td class="format-number">{{ activo_uso }}</td>
+                                                <td>-</td>
+                                                <td class="divider"></td>
+                                                <td class="format-number">{{ activo_uso }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Activo impuesto diferido</td>
+                                                <td class="format-number">{{ impuesto_diferido }}</td>
+                                                <td class="format-number">{{ impuesto_diferido }}</td>
+                                                <td class="divider"></td>
+                                                <td class="format-number">{{ impuesto_diferido_sit_financiera }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Amortización activo en uso</td>
+                                                <td>-</td>
+                                                <td class="format-number">{{ activo_uso }}</td>
+                                                <td class="divider"></td>
+                                                <td class="format-number">{{ amortizacion_sit_financiera }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Total Activo</strong></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="divider"></td>
+                                                <td class="format-number"><strong>{{ total_activo }}</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td><strong>Pasivo</strong></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pasivo por arrendamiento</td>
+                                                <td class="format-number">{{ activo_uso }}</td>
+                                                <td class="format-number">{{ efectivo }}</td>
+                                                <td class="divider"></td>
+                                                <td class="format-number">{{ pasivo_arrendamiento }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pasivo impuesto diferido</td>
+                                                <td class="format-number">{{ impuesto_diferido }}</td>
+                                                <td class="format-number">{{ impuesto_diferido }}</td>
+                                                <td class="divider"></td>
+                                                <td class="format-number">{{ impuesto_diferido_sit_financiera }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Total Pasivo</strong></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="divider"></td>
+                                                <td class="format-number"><strong>{{ total_pasivo }}</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td><strong>Patrimonio</strong></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pérdida</td>
+                                                <td class="format-number">{{ efectivo }}</td>
+                                                <td></td>
+                                                <td class="divider"></td>
+                                                <td class="format-number">{{ efectivo_sit_financiera }}</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td><strong>Comprobación</strong></td>
+                                                <td class="format-number"><strong>{{ comprobacion_debe }}</strong></td>
+                                                <td class="format-number"><strong>{{ comprobacion_haber }}</strong></td>
+                                                <td class="divider"></td>
+                                                <td class="format-number"><strong>{{ comprobacion }}</strong></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table><br>
+                                </div>
+                            <!-- Tabla 2 -->
+                            <h3 class="major">Estado de Resultado Integral</h3>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><em>Cuenta</em></th>
+                                                <th><em>Debe</em></th>
+                                                <th><em>Haber</em></th>
+                                                <th class="divider"></th>
+                                                <th><em>Totales</em></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Ingresos</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td class="divider"></td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Costos</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td class="divider"></td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Utilidad Bruta</strong></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="divider"></td>
+                                                <td class="format-number">{{ utilidad_bruta }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td><strong>Ingresos no operacionales</strong></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gasto por impuesto diferido</td>
+                                                <td class="format-number">{{ imp_activo|floatformat:2 }}</td>
+                                                <td class="format-number">{{ imp_pasivo|floatformat:2 }}</td>
+                                                <td class="divider"></td>
+                                                <td class="format-number"><strong>{{ gastos_total|floatformat:2 }}</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gasto depreciacion</td>
+                                                <td class="format-number">{{ activo_uso }}</td>
+                                                <td>-</td>
+                                                <td class="divider"></td>
+                                                <td class="format-number">{{ activo_uso }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Utilidad de operación</strong></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="divider"></td>
+                                                <td class="format-number"><strong>{{ utilidad_operacion|floatformat:2 }}</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gasto Financiero</td>
+                                                <td class="format-number">{{ gasto_financiero|floatformat:2 }}</td>
+                                                <td></td>
+                                                <td class="divider"></td>
+                                                <td class="format-number">{{ gasto_financiero|floatformat:2 }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Utilidad antes de impuestos</strong></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="divider"></td>
+                                                <td class="format-number"><strong>{{ utilidad_antes_impuestos|floatformat:2 }}</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Impuestos</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="divider"></td>
+                                                <td class="format-number">{{ impuestos }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Utilidad neta</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="divider"></td>
+                                                <td class="format-number">{{ utilidad_neta|floatformat:2 }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Sumas</strong></td>
+                                                <td class="format-number"><strong>{{ suma_debe|floatformat:2 }}</strong></td>
+                                                <td class="format-number"><strong>{{ suma_haber|floatformat:2 }}</strong></td>
+                                                <td class="divider"></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Pérdida</strong></td>
+                                                <td class="format-number"><strong>{{ perdida_debe|floatformat:2 }}</strong></td>
+                                                <td class="format-number"><strong>{{ perdida_haber|floatformat:2 }}</strong></td>
+                                                <td class="divider"></td>
+                                                <td class="format-number"><strong>{{ perdida_total|floatformat:2 }}</strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </section>
+                        <div style="text-align: center;">
+                            <button><a href="/aplicativo/">Calcular de Nuevo</a></button>
+                            <button><a href="/">Volver al Inicio</a></button>
+                            <button><a href="javascript:history.back()">Volver atrás</a></button>
+            
+                        </div>
+                    </article>
+                    <br>
+				<!-- Footer -->
+                <footer id="footer">
+                    <img src="{% static 'app/images/footer_corregir.png' %}"/>
+                </footer>
+        </div>			  
+
+            
+		<!-- BG -->
+			<!-- <div id="bg"></div> -->
+
+		<!-- Scripts -->
+			<script src="{% static 'app/js/jquery.min.js' %}"></script>
+			<script src="{% static 'app/js/browser.min.js' %}"></script>
+			<script src="{% static 'app/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'app/js/util.js' %}"></script>
+			<script src="{% static 'app/js/main.js' %}"></script>
+			<script src="{% static 'app/js/tablas.js' %}"></script>
+
+            
+	</body>
+</html>

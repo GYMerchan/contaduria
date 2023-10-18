@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PROYECTO</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        {% load static %}
+		<link rel="stylesheet" href="{% static 'app/css/tablas.css' %}" />
+		<link rel="stylesheet" href="{% static 'app/css/noscript.css' %}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+        <div id="wrapper">
+                <header id="header">
+                </header>
+				<!-- Main -->
+                    <article id="intro">
+                        <h2 class="major">Reconocimiento Inicial NIIIF 16</h2>
+                        <section>
+                            <h3 class="major">Reconocimiento inicial del arrendamiento</h3>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><em>Periodo</em></th>
+                                                <th><em>Codigo</em></th>
+                                                <th><em>Cuenta</em></th>
+                                                <th><em>Debe</em></th>
+                                                <th><em>Haber</em></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>0</td>
+                                                <td>1590</td>
+                                                <td>Activo en uso</td>
+                                                <td class="format-number">{{ activo_uso }}</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>0</td>
+                                                <td>2105</td>
+                                                <td>Pasivo por arrendamiento</td>
+                                                <td></td>
+                                                <td class="format-number">{{ activo_uso}}</td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div><br><br><br>
+                            <h3 class="major">Reconocimiento inicial del impuesto diferido del activo</h3>
+                            <div class="table-wrapper">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Valor presente del activo en uso</td>
+                                            <td class="format-number">{{ activo_uso }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Promedio tasa Impuesto de Renta y complementarios NIC 12</td>
+                                            <td>{{ impuesto_renta }}%</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td>Valor activo impuesto diferido</td>
+                                            <td class="format-number">{{ impuesto_diferido }}</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><em>Periodo</em></th>
+                                                <th><em>Codigo</em></th>
+                                                <th><em>Cuenta</em></th>
+                                                <th><em>Debe</em></th>
+                                                <th><em>Haber</em></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1710</td>
+                                                <td>Activo impuesto diferido</td>
+                                                <td class="format-number">{{ impuesto_diferido }}</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>2105</td>
+                                                <td>Gasto por impuesto diferido</td>
+                                                <td></td>
+                                                <td class="format-number">{{ impuesto_diferido}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div><br><br>
+                                
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                                <h3 class="major">Reconocimiento inicial del impuesto diferido del pasivo</h3>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Valor presente del pasivo en uso</td>
+                                                <td class="format-number">{{ activo_uso }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Promedio tasa Impuesto de Renta y complementarios NIC 12</td>
+                                                <td class="format-number">{{ impuesto_renta }}%</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td>Valor activo impuesto diferido</td>
+                                                <td class="format-number">{{ impuesto_diferido }}</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                    <div class="table-wrapper">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th><em>Periodo</em></th>
+                                                    <th><em>Codigo</em></th>
+                                                    <th><em>Cuenta</em></th>
+                                                    <th><em>Debe</em></th>
+                                                    <th><em>Haber</em></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>1710</td>
+                                                    <td>Activo impuesto diferido</td>
+                                                    <td></td>
+                                                    <td class="format-number">{{ impuesto_diferido }}</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>2105</td>
+                                                    <td>Gasto por impuesto diferido</td>
+                                                    <td class="format-number">{{ impuesto_diferido}}</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div><br><br>
+                        </section>
+                        <div style="text-align: center;">
+                            <button><a href="/aplicativo/">Calcular de Nuevo</a></button>
+                            <button><a href="/">Volver al Inicio</a></button>
+                            <button><a href="javascript:history.back()">Volver atrás</a></button>
+            
+                        </div>
+                    </article>
+                    <br>
+				<!-- Footer -->
+                <footer id="footer">
+                    <img src="{% static 'app/images/footer_corregir.png' %}"/>
+                </footer>
+        </div>			  
+
+            
+		<!-- BG -->
+			<!-- <div id="bg"></div> -->
+
+		<!-- Scripts -->
+			<script src="{% static 'app/js/jquery.min.js' %}"></script>
+			<script src="{% static 'app/js/browser.min.js' %}"></script>
+			<script src="{% static 'app/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'app/js/util.js' %}"></script>
+			<script src="{% static 'app/js/main.js' %}"></script>
+			<script src="{% static 'app/js/tablas.js' %}"></script>
+
+            
+	</body>
+</html>

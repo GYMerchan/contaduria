@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PROYECTO</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        {% load static %}
+		<link rel="stylesheet" href="{% static 'app/css/main.css' %}" />
+		<link rel="stylesheet" href="{% static 'app/css/noscript.css' %}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Calcular la NORMA NIIF 16</h1>
+								<p>A continuación podrá ver los resultados calculados</p>
+							</div>
+						</div>
+							<div class="inner">
+								<nav>
+									<p id="mostrarLista0" class="button primary"> Amortizaciones</p>
+									<ul id="listaDesplegable0">
+										<li><a href="{% url 'tabla1' %}" >Amortización del pasivo</a></li>
+									</ul><br>
+									<p id="mostrarLista6" class="button primary"> Reconocimiento Inicial</p>
+									<ul id="listaDesplegable6">
+										<li><a href="{% url 'tabla2' %}" >Reconocimiento Inicial NIIF 16</a></li>
+									</ul><br>
+									<p id="mostrarLista1" class="button primary">Reconocimiento Posterior</p>
+										<ul id="listaDesplegable1">
+											<li><a href="{% url 'tabla3' %}">Amortización del activo en uso</a></li>
+											<li><a href="{% url 'tabla4' %}">Gasto Financiero(Intereses)</a></li>
+											<li><a href="{% url 'tabla5' %}">Pago del arrendamiento</a></li>
+										</ul><br>
+									<p id="mostrarLista2" class="button primary">Impuesto diferido</p>
+										<ul id="listaDesplegable2">
+											<li><a href="{% url 'tabla6' %}">Activo por derecho de uso-Pasivo por arrendamiento</a></li>
+											<li><a href="{% url 'tabla7' %}">Evaluación del efecto fiscal desde las diferencias temporales</a></li>
+										</ul><br>
+									<p id="mostrarLista3" class="button primary">Reconocimiento Impuesto diferido</p>
+										<ul id="listaDesplegable3">
+											<li><a href="{% url 'tabla8' %}">Activo impuesto diferido-Pasivo impuesto diferido</a></li>
+										</ul><br>
+									<p id="mostrarLista4" class="button primary">Estados financieros</p>
+										<ul id="listaDesplegable4">
+											<li><a href="{% url 'tabla9' %}">Balance de prueba y Estado de Situación Financiera-Estado de Resultado Integral</a></li>
+										</ul><br>
+									<p id="mostrarLista7" class="button primary">Efecto Fiscal</p>
+										<ul id="listaDesplegable7">
+											<li><a href="{% url 'tabla10' %}">Efecto tributario de la NIIF 16</a></li>
+										</ul><br>
+									<p id="mostrarLista5" class="button primary">Efectos financieros posibles</p>
+										<ul id="listaDesplegable5">
+											<li><a href="{% url 'tabla11' %}">Efecto posible de la NIIF 16 (Indicadores financieros)</a></li>
+											<li><a href="{% url 'tabla12' %}">Comparaciones NIIF 16 vs NIC 17 y de posibles efectos en el Estado de Flujo de Efectivo</a></li>
+										</ul><br>
+								</nav>
+								<div style="text-align: center;">
+									<button><a href="/aplicativo/">Calcular de Nuevo</a></button>
+									<button><a href="/">Volver al Inicio</a></button>
+									<button><a href="javascript:history.back()">Volver atrás</a></button>
+			
+								</div>
+							</div>
+							
+							
+					</header>
+                    
+				<!-- Main -->
+					<!-- <div id="main"> -->
+						<hr>
+					<!-- </div> -->
+					
+				<!-- Footer -->
+				<footer id="footer">
+					<img src="{% static 'app/images/footer_corregir.png' %}"/>
+			  	</footer>
+				
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="{% static 'app/js/jquery.min.js' %}"></script>
+			<script src="{% static 'app/js/browser.min.js' %}"></script>
+			<script src="{% static 'app/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'app/js/util.js' %}"></script>
+			<script src="{% static 'app/js/extra.js' %}"></script>
+			<script src="{% static 'app/js/main.js' %}"></script>
+	</body>
+</html>

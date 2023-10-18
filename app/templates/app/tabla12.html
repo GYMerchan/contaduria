@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PROYECTO</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        {% load static %}
+		<link rel="stylesheet" href="{% static 'app/css/tablas.css' %}" />
+		<link rel="stylesheet" href="{% static 'app/css/noscript.css' %}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+        <div id="wrapper">
+                <header id="header">
+                </header>
+				<!-- Main -->
+                    <article id="intro">
+                        <h2 class="major">Efectos Financieros Posibles</h2>
+                        <section>
+                            <h3 class="major">Comparación de posibles efectos en el Estado de Resultado Integral, NIIF 16 vs NIC 17</h3>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><em></em></th>
+                                                <th><em></em></th>
+                                                <th><em>NIC 17</em></th>
+                                                <th><em>NIIF 16</em></th>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td><strong>Arrendamiento financiero</strong></td>
+                                                <td><strong>Arrendamiento opertivo</strong></td>
+                                                <td><strong>Todos los arrendamientos</strong></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Ingresos ordinarios</td>
+                                                <td>----</td>
+                                                <td>No cambia</td>
+                                                <td>----</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Costos y gastos</td>
+                                                <td>----</td>
+                                                <td>Todo el gasto era registrado </td>
+                                                <td>----</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Utilidad bruta</strong></td>
+                                                <td>----</td>
+                                                <td><strong> &darr; Disminuye</strong></td>
+                                                <td><strong> &uarr; Aumenta</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>EBITDA</strong></td>
+                                                <td>----</td>
+                                                <td>----</td>
+                                                <td>Aumenta según la tabla anterior</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Depreciaciones y amortizaciones</td>
+                                                <td>La depreciación del activo se registra aquí</td>
+                                                <td>----</td>
+                                                <td>La depreciación del activo se registra aquí</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Utilidad operativa EBIT</strong></td>
+                                                <td>-----</td>
+                                                <td><strong> &darr; Disminuye </strong>(incluye intereses e impuestos)</td>
+                                                <td><strong>  &uarr; Aumenta </strong>(no incluye impuestos ni intereses )</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gastos financieros</td>
+                                                <td>Los intereses se registran en Gastos Financieros</td>
+                                                <td>----</td>
+                                                <td>Los intereses se registran en Gastos Financieros</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div><br>
+                                <h3 class="major">Comparación de posibles efectos en el Estado de Flujo de Efectivo</h3>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><em>Pagos de intereses por el arrendamiento</em></th>
+                                                <th><em>NIC 17</em></th>
+                                                <th><em>NIIF 16</em></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Actividades de operación</td>
+                                                <td></td>
+                                                <td><strong> &uarr;</strong> Aumenta</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Actividades de financiación</td>
+                                                <td></td>
+                                                <td> <strong> &darr;</strong> Disminuye</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total del flujo de efectivo</td>
+                                                <td>Inversión</td>
+                                                <td>Financiación</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div><br>
+                        </section>
+                        <div style="text-align: center;">
+                            <button><a href="/aplicativo/">Calcular de Nuevo</a></button>
+                            <button><a href="/">Volver al Inicio</a></button>
+                            <button><a href="javascript:history.back()">Volver atrás</a></button>
+            
+                        </div>
+                    </article>
+                    <br>
+				<!-- Footer -->
+                <footer id="footer">
+                    <img src="{% static 'app/images/footer_corregir.png' %}"/>
+                </footer>
+        </div>			  
+
+            
+		<!-- BG -->
+			<!-- <div id="bg"></div> -->
+
+		<!-- Scripts -->
+			<script src="{% static 'app/js/jquery.min.js' %}"></script>
+			<script src="{% static 'app/js/browser.min.js' %}"></script>
+			<script src="{% static 'app/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'app/js/util.js' %}"></script>
+			<script src="{% static 'app/js/main.js' %}"></script>
+            
+	</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PROYECTO</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        {% load static %}
+		<link rel="stylesheet" href="{% static 'app/css/main.css' %}" />
+		<link rel="stylesheet" href="{% static 'app/css/noscript.css' %}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Norma NIIF 16 </h1>
+ 								<p>Arrendamientos*</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Introducción</a></li>
+								<li><a href="#about">Instructivo</a></li>
+								<!-- <li><a href="#contact">Autoras</a></li><br> -->
+								<!-- <li><a href="#elements">Extra</a></li> -->
+							</ul> <br>
+						</nav>
+							<a class="button" href="aplicativo/">Ir a la Herramienta</a>
+							<!-- <button id="mode-toggle" onclick="toggleDarkMode()">Cambiar Modo</button> -->
+<script>
+	// Función para cambiar entre los modos oscuro y claro
+/*function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode'); // Agrega o quita la clase dark-mode
+}
+
+// Verifica el modo actual en la carga de la página (puedes utilizar localStorage aquí)
+window.addEventListener('DOMContentLoaded', () => {
+    const body = document.body;
+    // Verifica si el modo oscuro está habilitado por defecto
+    const isDarkModeEnabled = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // Aplica el modo por defecto
+    body.classList.toggle('dark-mode', isDarkModeEnabled);
+});
+
+// Verifica y aplica el modo almacenado en localStorage
+window.addEventListener('DOMContentLoaded', () => {
+    const body = document.body;
+    const savedMode = localStorage.getItem('mode');
+    if (savedMode) {
+        body.classList.toggle(savedMode);
+    }
+});
+
+// Función para cambiar y guardar el modo en localStorage
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+    const currentMode = body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
+    localStorage.setItem('mode', currentMode);
+}*/
+</script>
+
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Presentación -->
+							<article id="intro">
+								<h2 class="major">Presentación</h2>
+								<span class="image main"><img src="{% static 'app/images/pic01.jpg' %}" alt="" /></span>
+								<p>Bienvenido a nuestra herramienta de apoyo para la aplicación y visualización de los efectos financieros 
+									y tributarios de la Norma Internacional de Información Financiera (NIIF) 16 en contratos de arrendamiento. 
+									Esta herramienta ha sido desarrollada para brindar asistencia a las empresas del Grupo 1 en Colombia 
+									que están bajo la supervisión de la Superintendencia de Sociedades y que operan bajo la NIIF 16. <br><br>
+									La NIIF 16, emitida por el IASB, se ha convertido en un estándar crucial que regula la contabilidad de arrendamientos.
+									 Para cumplir con esta normativa y tomar decisiones informadas, 
+									 es esencial entender y aplicar adecuadamente sus disposiciones. <br> <br>
+									Nuestra aplicación se ha diseñado con un enfoque en el arrendatario y tiene como objetivo facilitar los cálculos 
+									relacionados con los contratos de arrendamiento. Proporciona una plataforma para realizar operaciones contables, 
+									financieras y tributarias, permitiendo la visualización clara de 
+									los efectos de la NIIF 16 en las operaciones de su empresa. <br><br>
+									Esta herramienta, desarrollada como proyecto de investigación por Yeimy Vanessa Rincón Herrera, 
+									Karen Lorena León Duarte acompañadas del Ingeniero y programador Gerson Merchán y 
+									el profesor Oscar Rueda Serrano en colaboración con la Universidad de Santander (UDES), 
+									se basa en estándares internacionales y mejores prácticas contables. 
+									Está diseñada para simplificar la complejidad de la NIIF 16 y 
+									brindar orientación a las empresas en la toma de decisiones relacionadas con sus contratos de arrendamiento. <br>
+									<ul>
+										<li>Pertenecer al Grupo 1 de empresas..</li>
+										<li>Estar bajo la supervisión de la Superintendencia de Sociedades.</li>
+										<li>Tratar con contratos de arrendamiento financieros.</li>
+									</ul>
+									Le invitamos a explorar y utilizar nuestra herramienta con confianza,
+									 sabiendo que está respaldada por una investigación sólida y un enfoque
+									  práctico para ayudar a su empresa a cumplir con las regulaciones de la NIIF 16 y tomar decisiones informadas.
+								</p>
+							</article>
+
+						<!-- Instructivo -->
+							<article id="about">
+								<h2 class="major">Instructivo</h2>
+								<span class="image main"><img src="{% static 'app/images/pic03.jpg' %}" alt="" /></span>
+								<p><strong>a. Estructura.</strong> <br>
+									La herramienta de aplicación de la NIIF 16 conformado de la siguiente
+									<ol>
+										<li>Cuestionario: Son las preguntas iniciales para determinar si el arrendatario debe aplicar la NIIF 16 y qué tipo de tasa va a emplear en el procedimiento.</li>
+										<li>Datos y amortizaciones: En datos el arrendatario introduce los valores solicitados de acuerdo a la tasa que usa, para proceder a realizar los cálculos. En amortización muestra la tabla de amortización del contrato de arrendamiento.</li>
+										<li>Reconocimiento inicial: Se visualiza la contabilización del activo y de impuesto diferido.</li>
+										<li>Reconocimiento posterior: Se observa los asientos contables de la depredación del activo, los intereses y pagos generados.</li>
+										<li>Cálculo del impuesto diferido: Aquí se computa la diferencia del impuesto diferido.</li>
+										<li>Reconocimiento impuesto diferido: Se causa los ajustes de la diferencia en el Impuesto Diferido.</li>
+										<li>Estados de situación financiera: Atiende al Estado de Situación Financiera y el Estado de Resultado Integral.</li>
+										<li>Efectos fiscales: Se observa la diferencia tributaria.</li>
+										<li>Efectos financieros: Se plasma dos cuadros explicativos de los posibles efectos financieros.</li>
+									</ol>
+									<strong>b. Desplazamiento en las hojas de la herramienta.</strong> <br>
+									La herramienta posee con botones para ir de hoja en hoja o de <em>"datos y amortizaciones"</em> a la hoja que necesite el usuario. <br>
+									<strong>c. Casillas deshabilidas.</strong> <br>
+									Las casillas del <em>"cuestionario"</em> y de <em>"datos y amortizaciones"</em> en color gris y con el texto <em>"N/A"</em>, no se diligencian ya que los datos los genera la herramienta automáticamente. <br>
+									<strong>d. Diligenciamiento.</strong> <br>
+									La hoja cuestionario y la hoja de datos y amortizaciónes están destinadas para resporder preguntas cualitativas y cuantitativas para que la herramienta genere automaticamente el procedimiento de la aplicación de la NIIF  16.
+									El cuestionario hace cinco preguntas con el propósito de saber si el usuario aplica la norma y que tasa de descuento debe aplicar. La mayoría de preguntas se responden con las opciones que tiene la lista despegable. La pregunta 3 se responde cuando aplique, de lo contrario no se introduce el dato de la tasa incremental. 
+									La hoja de datos y amortizaciones pregunta los datos cuantitativos particulares del arrendamiento como: el canon, el tiempo y en determinado caso el valor razonable del contrato de arrendamiento. <br>
+									<strong>e. Ayudas.</strong> <br>
+									Con el fin de hacer más entendible la herramienta, se muestran comentarios en las casillas más relevantes. <br>
+									<strong>f. Procedimiento.</strong> <br>
+									Las mediciones, los reconocimientos, la presentación, cálculo del impuesto diferido y los efectos del contrato de arrendamiento son sistemáticos a partir de las respuestas conmutadas en la hoja cuestionario y la hoja datos y amortizaciones. <br>
+									<strong>g. Casos prácticos.</strong> <br>
+									<ul>
+										<li>Tasa implícita: La empresa XYA posee un contrato de arrendamiento con opción de compra, cuyo valor razonable es de 71.300.000 COP con un tiempo de 6 años. El pago anual es de 16.042.500 COP.</li>
+										<li>Tasa incremental: La empresa Milenial S.A. adquiere un nuevo contrato de arrendamiento por 53.000.000 COP anuales durante 10 años con una tasa de 14,64%. No espera comprar el activo subyacente pero materialmente es significativo para la empresa.</li>
+									</ul>
+								</p>
+							</article>
+
+						<!-- Contacto -->
+							<article id="contact">
+								<h2 class="major">Auxiliares de Desarrollo</h2>
+								<h4>Karen</h4>
+								<blockquote>Fringilla nisl. 
+									Donec accumsan interdum nisi,
+									quis tincidunt felis sagittis eget tempus euismod.
+									Vestibulum ante ipsum primis in faucibus vestibulum.
+									Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus.
+									Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.
+								</blockquote>
+
+								<h4>Compañera de Karen</h4>
+								<blockquote>Fringilla nisl. 
+									Donec accumsan interdum nisi,
+									quis tincidunt felis sagittis eget tempus euismod.
+									Vestibulum ante ipsum primis in faucibus vestibulum.
+									Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus.
+									Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.
+								</blockquote>
+									
+								<h4>Compañera de Karen</h4>
+								<blockquote>Fringilla nisl. 
+									Donec accumsan interdum nisi,
+									quis tincidunt felis sagittis eget tempus euismod.
+									Vestibulum ante ipsum primis in faucibus vestibulum.
+									Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus.
+									Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.
+								</blockquote>
+							</article>
+
+						<!-- Elements -->
+							<!-- <article id="elements">
+								<h2 class="major">Elements</h2>
+
+								<section>
+									<h3 class="major">Text</h3>
+									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+									<hr />
+									<h2>Heading Level 2</h2>
+									<h3>Heading Level 3</h3>
+									<h4>Heading Level 4</h4>
+									<h5>Heading Level 5</h5>
+									<h6>Heading Level 6</h6>
+									<hr />
+									<h4>Blockquote</h4>
+									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+									<h4>Preformatted</h4>
+									<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+								</section>
+
+								<section>
+									<h3 class="major">Lists</h3>
+
+									<h4>Unordered</h4>
+									<ul>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Alternate</h4>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Ordered</h4>
+									<ol>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis viverra.</li>
+										<li>Felis enim feugiat.</li>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis lorem.</li>
+										<li>Felis enim et feugiat.</li>
+									</ol>
+									<h4>Icons</h4>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+
+									<h4>Actions</h4>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Table</h3>
+									<h4>Default</h4>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<h4>Alternate</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+								</section>
+
+								<section>
+									<h3 class="major">Buttons</h3>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Primary</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button">Default</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+									</ul>
+									<ul class="actions">
+										<li><span class="button primary disabled">Disabled</span></li>
+										<li><span class="button disabled">Disabled</span></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Form</h3>
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<label for="demo-name">Name</label>
+												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+											</div>
+											<div class="field half">
+												<label for="demo-email">Email</label>
+												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+											</div>
+											<div class="field">
+												<label for="demo-category">Category</label>
+												<select name="demo-category" id="demo-category">
+													<option value="">-</option>
+													<option value="1">Manufacturing</option>
+													<option value="1">Shipping</option>
+													<option value="1">Administration</option>
+													<option value="1">Human Resources</option>
+												</select>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+												<label for="demo-priority-low">Low</label>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-high" name="demo-priority">
+												<label for="demo-priority-high">High</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">Email me a copy</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-human" name="demo-human" checked>
+												<label for="demo-human">Not a robot</label>
+											</div>
+											<div class="field">
+												<label for="demo-message">Message</label>
+												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</section>
+
+							</article> -->
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						  <img src="{% static 'app/images/footer_corregir.png' %}"/>
+					</footer>
+					  
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="{% static 'app/js/jquery.min.js' %}"></script>
+			<script src="{% static 'app/js/browser.min.js' %}"></script>
+			<script src="{% static 'app/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'app/js/util.js' %}"></script>
+			<script src="{% static 'app/js/main.js' %}"></script>
+	</body>
+</html>

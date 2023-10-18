@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PROYECTO</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        {% load static %}
+		<link rel="stylesheet" href="{% static 'app/css/tablas.css' %}" />
+		<link rel="stylesheet" href="{% static 'app/css/noscript.css' %}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+        <div id="wrapper">
+                <header id="header">
+                </header>
+				<!-- Main -->
+                    <article id="intro">
+                        <h2 class="major">Efectos Financieros Posibles</h2>
+                        <section>
+                            <h3 class="major">Efecto Posible de la NIIF 16(Indicadores Financieros)</h3>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th><em>Indicador Financiero</em></th>
+                                                <th><em>Que mide?</em></th>
+                                                <th><em>Fórmula</em></th>
+                                                <th><em>Efecto posible NIIF 16</em></th>
+                                                <th><em>Argumento</em></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Endudamiento (apalancamiento)</td>
+                                                <td>Solvencia a largo plazo</td>
+                                                <td>Pasivo/Patrimonio</td>
+                                                <td> <strong>&uarr;</strong> Aumenta</td>
+                                                <td>Los pasivos financieros aumentan. Por tanto, es posible que el patrimonio disminuya.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Razón corriente</td>
+                                                <td>Liquidez</td>
+                                                <td>Activo corriente/Pasivo corriente</td>
+                                                <td> <strong>&darr;</strong> Disminuye</td>
+                                                <td>El pasivo por arrendamiento aumenta. Este pasivo es a largo plazo
+                                                ya que se entiende que para el arrendatario es un arrendamiento financiero que el tiempo es mayor a 12 meses. 
+                                                Es decir, que el pasivo corriente disminuye.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Retorno de los Activos</td>
+                                                <td>Rantabilidad</td>
+                                                <td>Ventas/Total Activo</td>
+                                                <td> <strong>&darr;</strong> Disminuye</td>
+                                                <td>La rentabilidad disminuye porque el contrato de arrendamiento es reconocido como un activo en uso, 
+                                                    es decir es reconocido entre el total de los activos.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>EBITDA</td>
+                                                <td>Rentabilidad</td>
+                                                <td>Utilidad antes de intereses, impuestos, depreciaciones y amortizaciones</td>
+                                                <td> <strong>&uarr;</strong> Aumenta</td>
+                                                <td>La rentabilidad antes de los insteres, impuestos, 
+                                                    depreciaciones y amortizaciones aumenta a que los gastos del arrendamiento
+                                                     quedan por fuera del Estado de Situación Financiera.
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div><br>
+                        </section>
+                        <div style="text-align: center;">
+                            <button><a href="/aplicativo/">Calcular de Nuevo</a></button>
+                            <button><a href="/">Volver al Inicio</a></button>
+                            <button><a href="javascript:history.back()">Volver atrás</a></button>
+            
+                        </div>
+                    </article>
+                    <br>
+				<!-- Footer -->
+                <footer id="footer">
+                    <img src="{% static 'app/images/footer_corregir.png' %}"/>
+                </footer>
+        </div>			  
+
+            
+		<!-- BG -->
+			<!-- <div id="bg"></div> -->
+
+		<!-- Scripts -->
+			<script src="{% static 'app/js/jquery.min.js' %}"></script>
+			<script src="{% static 'app/js/browser.min.js' %}"></script>
+			<script src="{% static 'app/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'app/js/util.js' %}"></script>
+			<script src="{% static 'app/js/main.js' %}"></script>
+            
+            
+	</body>
+</html>
