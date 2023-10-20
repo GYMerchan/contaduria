@@ -34,7 +34,7 @@ class CalculoNIIF16Form(forms.Form):
     #campos si la pregunta 2 es si
     canon_si = forms.IntegerField(
         required=False,
-        widget=forms.NumberInput(attrs={'placeholder': 'Es el valor mensual que paga por tener en arriendo el bien'}),
+        widget=forms.NumberInput,
     )
     vlr_razonable_tasa_implicita_si = forms.IntegerField(
         required=False,

@@ -26,7 +26,7 @@
 				<div class="inner">
 					<p >En el botón 1 podrá calcular los Datos <br>	
 						Recuerde: EL PLAZO DEL ARRENDAMIENTO DEBE SER SUPERIOR A 12 MESES <br>
-						En el segundo botón puede ver las tablas geeneradas							
+						En el segundo botón puede ver las tablas generadas							
 					</p>
 					<nav >
 						<a class="button primary" href="#cuestionario" >Cuestionario, Datos y amortizaciones</a><br><br>
@@ -115,23 +115,23 @@
 						<h3 class="major">2 SI -Datos del contrato de arrendamiento y amortizaciones</h3>
 							<div class="field ">
 								<label for="canon_si">Cual es el canon de arrendamiento?</label>
-								<input type="number" id="canon_si" name="canon_si" value="" placeholder="Es el valor mensual que paga por tener en arriendo el bien" />
+								<input type="text" id="canon_si" name="canon_si" value="" placeholder="Es el valor mensual que paga por tener en arriendo el bien" />
 							</div>
 							<div class="field ">
 								<label for="tiempo_arrendamiento_si">Cual es el tiempo de arrendamiento?</label>
-								<input type="number" id="tiempo_arrendamiento_si" name="tiempo_arrendamiento_si" value="" placeholder="El tiempo pactado en el contrato, por arrendar el activo" />
+								<input type="text" id="tiempo_arrendamiento_si" name="tiempo_arrendamiento_si" value="" placeholder="El tiempo pactado en el contrato, por arrendar el activo" />
 							</div>
 							<div class="field ">
 								<label for="vlr_razonable_tasa_implicita_si">Cual es el valor razonable del activo?(Tasa Implícita)</label>
-								<input type="number" id="vlr_razonable_tasa_implicita_si" name="vlr_razonable_tasa_implicita_si" value="" placeholder="Ingrese el valor del inmueble" />
+								<input type="text" id="vlr_razonable_tasa_implicita_si" name="vlr_razonable_tasa_implicita_si" value="" placeholder="Ingrese el valor del inmueble" />
 							</div>
 							<div class="field ">
-								<label for="tasa_implicita_porcentaje_si">Tasa Implícita</label>
+								<label for="tasa_implicita_porcentaje_si">Tasa Implícita (%)</label>
 								<input type="text"  id="tasa_implicita_porcentaje_si" value="" name="tasa_implicita_porcentaje_si" placeholder="Este valor se calcula automaticamente" readonly />
 							</div>
 							<div class="field ">
 								<label for="depreciacion_periodica_si">Cual es la depreciación periodica del activo?</label>
-								<input type="number" id="depreciacion_periodica_si" value="" name="depreciacion_periodica_si" placeholder="Este valor se calcula automaticamente"  readonly/>
+								<input type="text" id="depreciacion_periodica_si" value="" name="depreciacion_periodica_si" placeholder="Este valor se calcula automaticamente"  readonly/>
 							</div>
 						</div>
 						<div class="fields" id="fin_proceso">
@@ -260,6 +260,7 @@ $(document).ready(function() {
 			opcionCompra.attr("readonly", true);
 		}
 	});
+	
 	
 });
 </script>

@@ -17,6 +17,11 @@
 	background-color: #fff;
 	color: #000;
 } */
+.title {
+    font-size: 18px; /* Ajusta el tamaño de fuente según tu preferencia */
+    text-transform: uppercase; /* Convierte el texto en mayúsculas */
+    text-decoration: underline; /* Agrega un subrayado al texto */
+}
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -958,6 +963,7 @@ input, select, textarea {
 	table {
 		margin: 0 0 2rem 0;
 		width: 100%;
+		max-width: 100%;
 	}
 
 		table tbody tr {
