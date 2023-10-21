@@ -14,6 +14,12 @@ import numpy_financial as npf
 class HomeView (TemplateView):
     template_name = 'app/base.html'
 
+class BorrarConsulta (View):
+    def post(self, request, *args, **kwargs):
+        request.session.clear()
+        return JsonResponse({'message': 'Datos borrados correctamente'})
+
+
 class AplicativoView(View):
     template_name = 'app/aplicativo.html'
     

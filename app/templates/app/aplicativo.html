@@ -24,13 +24,13 @@
 				</div>
 			</div>
 				<div class="inner">
-					<p >En el botón 1 podrá calcular los Datos <br>	
-						Recuerde: EL PLAZO DEL ARRENDAMIENTO DEBE SER SUPERIOR A 12 MESES <br>
-						En el segundo botón puede ver las tablas generadas							
+					<p >Puede calcular los datos en el primer botón<br>	
+						Tenga en cuenta que el periodo de arrendamiento debe ser superior a 12 meses <br>
+						En el segundo botón, encontrará las tablas generadas						
 					</p>
 					<nav >
-						<a class="button primary" href="#cuestionario" >Cuestionario, Datos y amortizaciones</a><br><br>
-						<a href="tablas/" class="button icon solid fa-list"> Acá podrá ver los resultados del análisis</a><br>
+						<a class="button primary" href="#cuestionario" >Cuestionario</a><br><br>
+						<a href="tablas/" class="button icon solid fa-list"> Resultados del análisis</a><br>
 					</nav>
 					<hr>
 				<button><a href="/">Volver al Inicio</a></button>
@@ -80,9 +80,9 @@
 							<!-- este campo la respuesta será igual a la de la pregunta 1 -->
 							<div class="field" id="pregunta_5">
 								<label for="{{ form.opcion_compra.id_for_label }}">5.El contrato tiene opción de compra?</label>
-								<input type="radio" id="id_opcion_compra_0" name="opcion_compra" value="si" {% if form.opcion_compra.value == 'si' %}checked{% endif %} readonly>
+								<input type="radio" id="id_opcion_compra_0" name="opcion_compra" value="si" {% if form.opcion_compra.value == 'si' %}checked{% endif %} disabled>
 								<label for="id_opcion_comprar_0">Sí</label>
-								<input type="radio" id="id_opcion_compra_1" name="opcion_compra" value="no" {% if form.opcion_compra.value == 'no' %}checked{% endif %} readonly>
+								<input type="radio" id="id_opcion_compra_1" name="opcion_compra" value="no" {% if form.opcion_compra.value == 'no' %}checked{% endif %} disabled>
 								<label for="id_opcion_compra_1">No</label>
 							</div>
 						</div><br>
@@ -166,6 +166,7 @@
 		<script src="{% static 'app/js/main.js' %}"></script>
 		<script src="{% static 'app/js/calculo_si.js' %}"></script>
 		<script src="{% static 'app/js/calculo_no.js' %}"></script>
+		<script src="{% static 'app/js/extra2.js' %}"></script>
 
 	</body>
 </html>

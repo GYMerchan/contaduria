@@ -16,12 +16,23 @@
                 </header>
 				<!-- Main -->
                     <article id="intro">
-                        <h2 class="major">Impuesto Diferido</h2>
+                        <h2 class="major">Reconocimiento Impuesto Diferido</h2>
                         <section>
-                            <h3 class="major">Activo impuesto diferido..................... Activo impuesto diferido</h3>
                                 <div class="table-wrapper">
                                     <table>
+                                        <colgroup span="1"></colgroup>
+                                        <colgroup span="3"></colgroup>
+                                        <colgroup span="1" class="divider"></colgroup>
+                                        <colgroup span="3"></colgroup>
                                         <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th colspan="3"><strong style="font-size: 18px;
+                                                    text-transform: uppercase;">Activo por impuesto diferido</strong></th>
+                                                <th ></th>
+                                                <th colspan="3"><strong style="font-size: 18px;
+                                                    text-transform: uppercase;">Pasivo por impuesto diferido</strong></th>
+                                            </tr>
                                             <tr>
                                                 <th><em>Codigo</em></th>
                                                 <th><em>54</em></th>
@@ -75,10 +86,11 @@
                                 </div>
                         </section>
                         <div style="text-align: center;">
+                            <button><a  href="{% url 'tabla7' %}">Atras</a></button>
                             <button><a href="/aplicativo/">Calcular de Nuevo</a></button>
                             <button><a href="/">Volver al Inicio</a></button>
                             <button><a href="javascript:history.back()">Volver atrás</a></button>
-            
+                            <button><a  href="{% url 'tabla9' %}">Siguiente</a></button>
                         </div>
                     </article>
                     <br>

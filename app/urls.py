@@ -1,9 +1,10 @@
 from django.urls import path
 from .views import HomeView, AplicativoView, CuestionarioView, Tabla1, calcularTIR, Tabla3, CalcularValorRazonable, \
-        Tabla2, Tabla4, Tabla5, Tabla6, Tabla7, Tabla8, Tabla9, Tabla10, Tabla11, Tabla12
+        Tabla2, Tabla4, Tabla5, Tabla6, Tabla7, Tabla8, Tabla9, Tabla10, Tabla11, Tabla12, BorrarConsulta
 
 urlpatterns = [
     path('', HomeView.as_view(), name='base'),
+    path('aplicativo/borrar/', BorrarConsulta.as_view(), name='borrar'),
     path('aplicativo/', AplicativoView.as_view(), name='aplicativo'),
     path('aplicativo/tablas/', CuestionarioView.as_view(), name='tablas'),
     path('aplicativo/tir/', calcularTIR.as_view(), name='tir'),

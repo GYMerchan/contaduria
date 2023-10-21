@@ -27,8 +27,10 @@ class CalculoNIIF16Form(forms.Form):
     )
     opcion_compra = forms.ChoiceField(
         choices=[('si', 'Sí'), ('no', 'No')],
-        widget=forms.RadioSelect,
+        widget=forms.RadioSelect(attrs={'readonly': 'readonly'}),
         required=False,
+        initial='no',
+        disabled=True
     )
 
     #campos si la pregunta 2 es si
