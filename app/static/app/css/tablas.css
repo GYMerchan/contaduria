@@ -1,6 +1,27 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
+/* Estilo para ocultar elementos con la clase "no-print" en la vista de impresión */
+@media print {
+	body {
+        color: black !important;
+        background-color: white !important;
+    }
+    section {
+        font-size: 40% !important; /* Añade !important */
+        margin: 30 !important; /* Añade !important */
+        padding: 30 !important; /* Añade !important */
+    }
+}
+/* Estilo opcional para personalizar el botón de impresión */
+#imprimirTabla {
+background-color: #007bff;
+color: #fff;
+padding: 10px 20px;
+cursor: pointer;
+}
+
+
 .format-number {
 	color: #ffffff;
 }

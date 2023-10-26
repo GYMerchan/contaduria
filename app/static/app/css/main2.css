@@ -1,26 +1,24 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
-/* Estilo para ocultar elementos con la clase "no-print" en la vista de impresión */
-@media print {
-	body {
-        color: black !important;
-        background-color: white !important;
-    }
-    section {
-        font-size: 60% !important; /* Añade !important */
-        margin: 30 !important; /* Añade !important */
-        padding: 30 !important; /* Añade !important */
-    }
+/*
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+.format-number {
+	color: #000;
 }
-/* Estilo opcional para personalizar el botón de impresión */
-#imprimirTabla {
-background-color: #007bff;
-color: #fff;
-padding: 10px 20px;
-cursor: pointer;
+th.divider {
+    border-right: 1px solid #fff;
+    width: 1px;
+    padding: 0;
 }
-
+td.divider {
+    border-right: 1px solid #fff;
+    width: 1px;
+    padding: 0;
+}
 .title {
     font-size: 18px; /* Ajusta el tamaño de fuente según tu preferencia */
     text-transform: uppercase; /* Convierte el texto en mayúsculas */
@@ -92,13 +90,11 @@ input, select, textarea {
 }
 .inner ul {
 	text-align: center;
-	display: block; /* Esto hace que el texto se centre horizontalmente */
-	margin: 0 auto; /* Esto centra el bloque horizontalmente */
+	display: block;
+	margin: 0 auto;
 }
 /* Basic */
 	
-
-
 	@-ms-viewport {
 		width: device-width;
 	}
@@ -120,7 +116,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #1b1f22;
+		background-color: rgba(223, 223, 223, 0.526);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -165,8 +161,8 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #ffffff;
-		font-family: "Source Sans Pro", sans-serif;
+		color: #000;
+		font-family: "Open Sans", sans-serif;
 		font-weight: 300;
 		font-size: 1rem;
 		line-height: 1.65;
@@ -177,17 +173,18 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
+		border-bottom: dotted 1px rgba(48, 84, 150, 0.759);
 		text-decoration: none;
 		color: inherit;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
+			background-color: rgba(48, 84, 150, 0.367);
 		}
 
 	strong, b {
-		color: #ffffff;
+		color: #000;
 		font-weight: 600;
 	}
 
@@ -200,7 +197,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
+		color: #000;
 		font-weight: 600;
 		line-height: 1.5;
 		margin: 0 0 1rem 0;
@@ -214,7 +211,7 @@ input, select, textarea {
 		}
 
 		h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
-			border-bottom: solid 1px #ffffff;
+			border-bottom: solid 1px #000;
 			width: -moz-max-content;
 			width: -webkit-max-content;
 			width: -ms-max-content;
@@ -278,7 +275,7 @@ input, select, textarea {
 	}
 
 	blockquote {
-		border-left: solid 4px #ffffff;
+		border-left: solid 4px #000;
 		font-style: italic;
 		margin: 0 0 2rem 0;
 		padding: 0.5rem 0 0.5rem 2rem;
@@ -309,7 +306,7 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-bottom: solid 1px #ffffff;
+		border-bottom: solid 1px #000;
 		margin: 2.75rem 0;
 	}
 
@@ -400,7 +397,7 @@ input, select, textarea {
 		}
 
 	label {
-		color: #ffffff;
+		color: #000;
 		display: block;
 		font-size: 0.8rem;
 		font-weight: 300;
@@ -427,7 +424,7 @@ input, select, textarea {
 		transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 		background-color: transparent;
 		border-radius: 4px;
-		border: solid 1px #ffffff;
+		border: solid 1px #000;
 		color: inherit;
 		display: block;
 		outline: 0;
@@ -454,8 +451,8 @@ input, select, textarea {
 		select:focus,
 		textarea:focus {
 			background: rgba(255, 255, 255, 0.075);
-			border-color: #ffffff;
-			box-shadow: 0 0 0 1px #ffffff;
+			border-color: #000;
+			box-shadow: 0 0 0 1px #000;
 		}
 
 	select {
@@ -469,7 +466,7 @@ input, select, textarea {
 	}
 
 		select option {
-			color: #ffffff;
+			color: #000;
 			background: #1b1f22;
 		}
 
@@ -514,7 +511,7 @@ input, select, textarea {
 			-webkit-user-select: none;
 			-ms-user-select: none;
 			user-select: none;
-			color: #ffffff;
+			color: #000;
 			cursor: pointer;
 			display: inline-block;
 			font-size: 0.8rem;
@@ -546,7 +543,7 @@ input, select, textarea {
 				-ms-transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 				transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 				border-radius: 4px;
-				border: solid 1px #ffffff;
+				border: solid 1px #000;
 				content: '';
 				display: inline-block;
 				height: 1.65rem;
@@ -560,17 +557,17 @@ input, select, textarea {
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background: #ffffff !important;
-			border-color: #ffffff !important;
-			color: #1b1f22;
+			background: #000 !important;
+			border-color: #000 !important;
+			color: #fff;
 			content: '\f00c';
 		}
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			background: rgba(255, 255, 255, 0.075);
-			border-color: #ffffff;
-			box-shadow: 0 0 0 1px #ffffff;
+			background: rgba(0, 0, 0, 0.556);
+			border-color: #000;
+			box-shadow: 0 0 0 1px #000;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -582,27 +579,27 @@ input, select, textarea {
 	}
 
 	::-webkit-input-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(0, 0, 0, 0.63) !important;
 		opacity: 1.0;
 	}
 
 	:-moz-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(4, 4, 4, 0.63) !important;
 		opacity: 1.0;
 	}
 
 	::-moz-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(4, 4, 4, 0.63) !important;
 		opacity: 1.0;
 	}
 
 	:-ms-input-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(4, 4, 4, 0.63) !important;
 		opacity: 1.0;
 	}
 
 	.formerize-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(4, 4, 4, 0.63) !important;
 		opacity: 1.0;
 	}
 
@@ -610,7 +607,7 @@ input, select, textarea {
 
 	.box {
 		border-radius: 4px;
-		border: solid 1px #ffffff;
+		border: solid 1px #000;
 		margin-bottom: 2rem;
 		padding: 1.5em;
 	}
@@ -777,7 +774,7 @@ input, select, textarea {
 		}
 
 			ul.alt li {
-				border-top: solid 1px #ffffff;
+				border-top: solid 1px #000;
 				padding: 0.5em 0;
 			}
 
@@ -941,7 +938,7 @@ input, select, textarea {
 
 			ul.icons li a {
 				border-radius: 100%;
-				box-shadow: inset 0 0 0 1px #ffffff;
+				box-shadow: inset 0 0 0 1px #000;
 				display: inline-block;
 				height: 2.25rem;
 				line-height: 2.25rem;
@@ -971,13 +968,13 @@ input, select, textarea {
 	}
 
 		table tbody tr {
-			border: solid 1px #ffffff;
+			border: solid 1px #000;
 			border-left: 0;
 			border-right: 0;
 		}
 
 			table tbody tr:nth-child(2n + 1) {
-				background-color: rgba(255, 255, 255, 0.075);
+				background-color: rgba(48, 84, 150, 0.516);
 			}
 
 		table td {
@@ -985,7 +982,7 @@ input, select, textarea {
 		}
 
 		table th {
-			color: #ffffff;
+			color: #000;
 			font-size: 0.9em;
 			font-weight: 600;
 			padding: 0 0.75em 0.75em 0.75em;
@@ -993,11 +990,11 @@ input, select, textarea {
 		}
 
 		table thead {
-			border-bottom: solid 2px #ffffff;
+			border-bottom: solid 2px #000;
 		}
 
 		table tfoot {
-			border-top: solid 2px #ffffff;
+			border-top: solid 2px #000;
 		}
 
 		table.alt {
@@ -1005,7 +1002,7 @@ input, select, textarea {
 		}
 
 			table.alt tbody tr td {
-				border: solid 1px #ffffff;
+				border: solid 1px #000;
 				border-left-width: 0;
 				border-top-width: 0;
 			}
@@ -1044,8 +1041,8 @@ input, select, textarea {
 		background-color: transparent;
 		border-radius: 4px;
 		border: 0;
-		box-shadow: inset 0 0 0 1px #ffffff;
-		color: #ffffff !important;
+		box-shadow: inset 0 0 0 1px #000;
+		color: #000 !important;
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.8rem;
@@ -1066,7 +1063,7 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: rgba(255, 255, 255, 0.075);
+			background-color: rgba(48, 84, 150, 0.492);
 		}
 
 		input[type="submit"]:active,
@@ -1074,7 +1071,7 @@ input, select, textarea {
 		input[type="button"]:active,
 		button:active,
 		.button:active {
-			background-color: rgba(255, 255, 255, 0.175);
+			background-color: rgb(48, 84, 150);
 		}
 
 		input[type="submit"].icon:before,
@@ -1108,8 +1105,8 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #ffffff;
-			color: #1b1f22 !important;
+			background-color: rgba(48, 84, 150);
+			color: #fff !important;
 			font-weight: 600;
 		}
 
@@ -1170,7 +1167,7 @@ input, select, textarea {
 			-webkit-transition-delay: 0.75s;
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
-			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("{% static 'app/images/overlay.png' %}");
+			/* background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("{% static 'app/images/overlay.png' %}"); */
 			background-size: auto,
  256px 256px;
 			background-position: center,
@@ -1189,7 +1186,7 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("{% static 'app/images/bg2.jpg' %}");
+			/* background-image: url("{% static 'app/images/bg2.jpg' %}"); */
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -1208,7 +1205,7 @@ input, select, textarea {
 		}
 
 		body.is-preload #bg:before {
-			background-color: #000000;
+			background-color: #fff;
 		}
 
 /* Wrapper */
@@ -1285,10 +1282,10 @@ input, select, textarea {
 		-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
 		-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
 		transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-		background-image: -moz-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
-		background-image: -webkit-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
-		background-image: -ms-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
-		background-image: radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
+		/* background-image: -moz-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%); */
+		/* background-image: -webkit-radial-gradient(rgba(0, 75, 150, 0.25) 25%, rgba(0, 0, 0, 0) 55%); */
+		/* background-image: -ms-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%); */
+		/* background-image: radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%); */
 		max-width: 100%;
 		text-align: center;
 	}
@@ -1310,7 +1307,7 @@ input, select, textarea {
 				left: calc(50% - 1px);
 				width: 1px;
 				height: calc(3.5rem + 1px);
-				background: #ffffff;
+				background: #000;
 			}
 
 		#header > :first-child {
@@ -1325,7 +1322,7 @@ input, select, textarea {
 			width: 5.5rem;
 			height: 5.5rem;
 			line-height: 5.5rem;
-			border: solid 1px #ffffff;
+			border: solid 1px #000;
 			border-radius: 100%;
 		}
 
@@ -1335,7 +1332,7 @@ input, select, textarea {
 
 		#header .content {
 			border-style: solid;
-			border-color: #ffffff;
+			border-color: #000;
 			border-top-width: 1px;
 			border-bottom-width: 1px;
 			max-width: 100%;
@@ -1374,13 +1371,13 @@ input, select, textarea {
 			margin-bottom: 0;
 			list-style: none;
 			padding-left: 0;
-			border: solid 1px #ffffff;
+			border: solid 1px #000;
 			border-radius: 4px;
 		}
 
 			#header nav ul li {
 				padding-left: 0;
-				border-left: solid 1px #ffffff;
+				border-left: solid 1px #000;
 			}
 
 				#header nav ul li:first-child {
@@ -1400,11 +1397,11 @@ input, select, textarea {
 				}
 
 					#header nav ul li a:hover {
-						background-color: rgba(255, 255, 255, 0.075);
+						background-color: rgba(48, 84, 150, 0.382);
 					}
 
 					#header nav ul li a:active {
-						background-color: rgba(255, 255, 255, 0.175);
+						background-color: rgba(48, 84, 150, 0.401);
 					}
 
 		#header nav.use-middle:after {
@@ -1415,7 +1412,7 @@ input, select, textarea {
 			left: calc(50% - 1px);
 			width: 1px;
 			height: 100%;
-			background: #ffffff;
+			background: #000;
 		}
 
 		#header nav.use-middle ul li.is-middle {
@@ -1512,7 +1509,7 @@ input, select, textarea {
 
 					#header nav ul li {
 						border-left: 0;
-						border-top: solid 1px #ffffff;
+						border-top: solid 1px #000;
 					}
 
 						#header nav ul li:first-child {
@@ -1577,7 +1574,7 @@ input, select, textarea {
 			position: relative;
 			width: 40rem;
 			max-width: 100%;
-			background-color: rgba(27, 31, 34, 0.85);
+			background-color: rgba(48, 84, 150, 0.171);
 			border-radius: 4px;
 			opacity: 0;
 		}
@@ -1623,11 +1620,11 @@ input, select, textarea {
 				}
 
 				#main article .close:hover:before {
-					background-color: rgba(255, 255, 255, 0.075);
+					background-color: rgba(8, 8, 8, 0.498);
 				}
 
 				#main article .close:active:before {
-					background-color: rgba(255, 255, 255, 0.175);
+					background-color: rgba(13, 13, 13, 0.92);
 				}
 
 		@media screen and (max-width: 736px) {
@@ -1704,4 +1701,3 @@ input, select, textarea {
 			transform: translateY(-50%); /* Lo ajustamos verticalmente al centro */
 			z-index: 1000; /* Asegura que el botón esté encima de otros elementos */
 		}
-		

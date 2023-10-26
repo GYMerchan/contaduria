@@ -95,11 +95,13 @@
                                 </div>
                         </section>
                         <div style="text-align: center;">
-                            <button><a  href="{% url 'tabla5' %}">Atras</a></button>
-                            <button><a href="/aplicativo/">Calcular de Nuevo</a></button>
-                            <button><a href="/">Volver al Inicio</a></button>
-                            <button><a href="javascript:history.back()">Volver atrás</a></button>
-                            <button><a  href="{% url 'tabla7' %}">Siguiente</a></button>
+                            <button ><a  href="{% url 'tabla5' %}">Atras</a></button>
+                            <button ><a href="/">Volver al Inicio</a></button>
+                            <button ><a href="{% url 'tablas' %}">Volver a Resultados</a></button>
+                            <button ><a  href="{% url 'tabla7' %}">Siguiente</a></button>
+                            <!-- <button id="imprimirTabla">Imprimir Tabla</button> -->
+
+
                         </div>
                     </article>
                     <br>
@@ -120,6 +122,7 @@
 			<script src="{% static 'app/js/util.js' %}"></script>
 			<script src="{% static 'app/js/main.js' %}"></script>
 			<script src="{% static 'app/js/tablas.js' %}"></script>
+			<script src="{% static 'app/js/imprimir.js' %}"></script>
 
             
 	</body>

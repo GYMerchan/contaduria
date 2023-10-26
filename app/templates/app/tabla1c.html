@@ -6,11 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         {% load static %}
 		<!-- <link rel="stylesheet" href="{% static 'app/css/tablas.css' %}" /> -->
-		<link rel="stylesheet" type="text/css" href="{% static 'app/css/main.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'app/css/main2.css' %}" />
 		<link rel="stylesheet" type="text/css" href="{% static 'app/css/noscript.css' %}" />
 	</head>
 	<body class="is-preload">
-
+        
 		<!-- Wrapper -->
         <div id="wrapper">
                 <header id="header">
@@ -53,10 +53,11 @@
                                 </div>
                         </section>
                         <div style="text-align: center;">
-                            <button class="no-print"><a href="/aplicativo/">Calcular de Nuevo</a></button>
-                            <button class="no-print"><a href="/">Volver al Inicio</a></button>
-                            <button class="no-print"><a href="{% url 'tablas' %}">Volver a Resultados</a></button>
-                            <button class="no-print"><a  href="{% url 'tabla2' %}">Siguiente</a></button>
+                            <button class="no-print"><a href="/base2/aplicativo2/">Calcular de Nuevo</a></button>
+                            <button class="no-print"><a href="/base2/">Volver al Inicio</a></button>
+                            <button class="no-print"><a href="{% url 'tablas2' %}">Volver a Resultados</a></button>
+                            <button class="no-print"><a  href="{% url 'tabla2c
+                                ' %}">Siguiente</a></button>
                             <!-- <button id="imprimirTabla">Imprimir Tabla</button> -->
                         </div>
                     </article>

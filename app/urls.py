@@ -1,6 +1,7 @@
 from django.urls import path
 from .views import HomeView, AplicativoView, CuestionarioView, Tabla1, calcularTIR, Tabla3, CalcularValorRazonable, \
-        Tabla2, Tabla4, Tabla5, Tabla6, Tabla7, Tabla8, Tabla9, Tabla10, Tabla11, Tabla12, BorrarConsulta
+        Tabla2, Tabla4, Tabla5, Tabla6, Tabla7, Tabla8, Tabla9, Tabla10, Tabla11, Tabla12, BorrarConsulta, \
+        HomeView2, AplicativoView2, CuestionarioView2, Tabla1c, Tabla2c
 
 urlpatterns = [
     path('', HomeView.as_view(), name='base'),
@@ -21,5 +22,13 @@ urlpatterns = [
     path('aplicativo/tablas/tabla10/', Tabla10.as_view(), name='tabla10'),
     path('aplicativo/tablas/tabla11/', Tabla11.as_view(), name='tabla11'),
     path('aplicativo/tablas/tabla12/', Tabla12.as_view(), name='tabla12'),
-    
+    path('base2/', HomeView2.as_view(), name='base2'),
+    path('base2/aplicativo2/', AplicativoView2.as_view(), name='aplicativo2'),
+    path('base2/aplicativo2/tablas2/', CuestionarioView2.as_view(), name='tablas2'),
+    path('aplicativo2/tablas2/tabla1c/', Tabla1c.as_view(), name='tabla1c'),
+    path('aplicativo2/tablas2/tabla2c/', Tabla2c.as_view(), name='tabla2c'),
+
+
+
+
 ]

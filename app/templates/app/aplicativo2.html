@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PROYECTO</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        {% load static %}
+		<link rel="stylesheet" href="{% static 'app/css/main2.css' %}" />
+		<link rel="stylesheet" href="{% static 'app/css/noscript.css' %}" />
+	</head>
+	<body class="is-preload">
+	<!-- Wrapper -->
+	<div id="wrapper">
+	<!-- Header -->
+		<header id="header">
+			<div class="logo">
+				<span class="icon fa-gem"></span>
+			</div>
+			<div class="content">
+				<div class="inner">
+					<h1>Calcular la NORMA NIIF 16</h1>
+					<p>Bienvenido<br />
+					A continuación deberá ingresar los datos</p>
+				</div>
+			</div>
+				<div class="inner">
+					<p >Puede calcular los datos en el primer botón<br>	
+						Tenga en cuenta que el periodo de arrendamiento debe ser superior a 12 meses <br>
+						En el segundo botón, encontrará las tablas generadas						
+					</p>
+					<nav >
+						<a class="button primary" href="#cuestionario" >Cuestionario</a><br><br>
+						<a href="tablas2/" class="button icon solid fa-list"> Resultados del análisis</a><br>
+					</nav>
+					<hr>
+				<button><a href="/base2/">Volver al Inicio</a></button>
+				</div>
+		</header>
+	<!-- Main -->
+		<div id="main">
+			<article id="cuestionario">
+				<h2 class="major">CUESTIONARIO</h2>
+				<section>
+					Para conocer si el arrendatario debe utilizar una tasa de financiación implícita o incremental de conformidad con la NIIF 16, párrafo 26. Es necesario que lea cuidadosamente y responda las siguientes preguntas que aparecen en blanco, según las opciones proporcionadas:							
+					<br><br>
+					<h3 class="major">Preguntas aplicación NIIF 16</h3>
+					
+					<form method="post">
+						{% csrf_token %}
+						<div class="fields" id="pregunta_1">
+							<!-- si acá es no, se inhabilita todo el form -->
+							<div class="field">
+								<label for="{{ form.superior_anual.id_for_label }}">1.El plazo del arrendamiento es superior a 12 meses?</label>
+								<input type="radio" id="id_superior_anual_0" name="superior_anual" value="si" {% if form.superior_anual.value == 'si' %}checked{% endif %}>
+								<label for="id_superior_anual_0">Sí</label>
+								<input type="radio" id="id_superior_anual_1" name="superior_anual" value="no" {% if form.superior_anual.value == 'no' %}checked{% endif %}>
+								<label for="id_superior_anual_1">No</label>
+							</div>
+						</div>
+						<div class="fields" id="cuestionario1">
+							<div class="field" id="pregunta_2">
+								<label for="{{ form.valor_razonable.id_for_label }}">2.Conoce el valor razonable del activo?</label>
+								<input type="radio" id="id_valor_razonable_0" name="valor_razonable" value="si" {% if form.valor_razonable.value == 'si' %}checked{% endif %}>
+								<label for="id_valor_razonable_0">Sí</label>
+								<input type="radio" id="id_valor_razonable_1" name="valor_razonable" value="no" {% if form.valor_razonable.value == 'no' %}checked{% endif %}>
+								<label for="id_valor_razonable_1">No</label>
+							</div>
+							<!-- si la respuesta de la pregunta 1 es no, se habilita esta pregunta, de lo contrario queda inhabilitada -->
+							<div class="field" id="pregunta_3">
+								<label for="tasa_incremental_no">3.Cual es la tasa incremental?</label>
+								<input type="text" id="tasa_incremental_no" name="tasa_incremental_no" value="" placeholder="Digite el porcentaje %" />
+							</div>
+							<div class="field">
+								<label for="{{ form.vp_vr_superior.id_for_label }}">4. El valor presente o valor razonable es superior al umbral de materialidad?</label>
+								<input type="radio" id="id_vp_vr_superior_0" name="vp_vr_superior" value="si" {% if form.vp_vr_superior.value == 'si' %}checked{% endif %}>
+								<label for="id_vp_vr_superior_0">Sí</label>
+								<input type="radio" id="id_vp_vr_superior_1" name="vp_vr_superior" value="no" {% if form.vp_vr_superior.value == 'no' %}checked{% endif %}>
+								<label for="id_vp_vr_superior_1">No</label>
+							</div>
+							<!-- este campo la respuesta será igual a la de la pregunta 1 -->
+							<div class="field" id="pregunta_5">
+								<label for="{{ form.opcion_compra.id_for_label }}">5.El contrato tiene opción de compra?</label>
+								<input type="radio" id="id_opcion_compra_0" name="opcion_compra" value="si" {% if form.opcion_compra.value == 'si' %}checked{% endif %} disabled>
+								<label for="id_opcion_comprar_0">Sí</label>
+								<input type="radio" id="id_opcion_compra_1" name="opcion_compra" value="no" {% if form.opcion_compra.value == 'no' %}checked{% endif %} disabled>
+								<label for="id_opcion_compra_1">No</label>
+							</div>
+						</div><br>
+						<!-- para cuando la 2 es no -->
+						<div class="fields" id="pregunta2_no" >
+						<h3 class="major">Datos del contrato de arrendamiento y amortizaciones</h3>
+							<div class="field ">
+								<label for="canon_no">Cual es el canon de arrendamiento?</label>
+								<input type="text" id="canon_no" name="canon_no" value="" placeholder="Es el valor mensual que paga por tener en arriendo el bien" />
+							</div>
+							<div class="field">
+								<label for="tasa_implicita_no">Cuál es la tasa implicita?</label>
+								<input type="text" id="tasa_implicita_no" name="tasa_implicita_no" value="" placeholder="Este valor se calcula automaticamente"  readonly/>
+							</div>
+							<div class="field ">
+								<label for="tiempo_arrendamiento_no">Cual es el tiempo de arrendamiento?</label>
+								<input type="text" id="tiempo_arrendamiento_no" name="tiempo_arrendamiento_no" value="" placeholder="El tiempo pactado en el contrato, por arrendar el activo" />
+							</div>
+							<div class="field ">
+								<label for="valor_presente_no">Cual es el valor presente?(Tasa Implícita)</label>
+								<input type="text" id="valor_presente_no" value="" name="valor_presente_no" placeholder="Este valor se calcula automaticamente"  readonly />
+							</div>
+							<div class="field ">
+								<label for="depreciacion_periodica_no">Cual es la depreciación periodica del activo?</label>
+								<input type="text" id="depreciacion_periodica_no" name="depreciacion_periodica_no" value="" placeholder="Este valor se calcula automaticamente"  readonly />
+							</div>
+						</div>
+						<!-- para cuando la 2 es si -->
+						<div class="fields" id="pregunta2_si" >
+						<h3 class="major">2 SI -Datos del contrato de arrendamiento y amortizaciones</h3>
+							<div class="field ">
+								<label for="canon_si">Cual es el canon de arrendamiento?</label>
+								<input type="text" id="canon_si" name="canon_si" value="" placeholder="Es el valor mensual que paga por tener en arriendo el bien" />
+							</div>
+							<div class="field ">
+								<label for="tiempo_arrendamiento_si">Cual es el tiempo de arrendamiento?</label>
+								<input type="text" id="tiempo_arrendamiento_si" name="tiempo_arrendamiento_si" value="" placeholder="El tiempo pactado en el contrato, por arrendar el activo" />
+							</div>
+							<div class="field ">
+								<label for="vlr_razonable_tasa_implicita_si">Cual es el valor razonable del activo?(Tasa Implícita)</label>
+								<input type="text" id="vlr_razonable_tasa_implicita_si" name="vlr_razonable_tasa_implicita_si" value="" placeholder="Ingrese el valor del inmueble" />
+							</div>
+							<div class="field ">
+								<label for="tasa_implicita_porcentaje_si">Tasa Implícita (%)</label>
+								<input type="text"  id="tasa_implicita_porcentaje_si" value="" name="tasa_implicita_porcentaje_si" placeholder="Este valor se calcula automaticamente" readonly />
+							</div>
+							<div class="field ">
+								<label for="depreciacion_periodica_si">Cual es la depreciación periodica del activo?</label>
+								<input type="text" id="depreciacion_periodica_si" value="" name="depreciacion_periodica_si" placeholder="Este valor se calcula automaticamente"  readonly/>
+							</div>
+						</div>
+						<div class="fields" id="fin_proceso">
+							<div class="field">
+								<label for="">Fin del proceso</label>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Guardar" class="primary" /></li>
+							<li><input type="reset" value="Borrar Consulta" /></li>
+						</ul>
+					</form>
+				</section>
+			</article>
+		</div>
+	<!-- Footer -->
+		<footer id="footer">
+			<img src="{% static 'app/images/footer_corregir.png' %}"/>
+		</footer>
+	</div>
+
+	<!-- BG -->
+	<div id="bg"></div>
+
+	<!-- Scripts -->
+		<script src="{% static 'app/js/jquery.min.js' %}"></script>
+		<script src="{% static 'app/js/jquery-3.6.0.min.js' %}"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="{% static 'app/js/browser.min.js' %}"></script>
+		<script src="{% static 'app/js/breakpoints.min.js' %}"></script>
+		<script src="{% static 'app/js/util.js' %}"></script>
+		<script src="{% static 'app/js/main.js' %}"></script>
+		<script src="{% static 'app/js/calculo_si.js' %}"></script>
+		<script src="{% static 'app/js/calculo_no.js' %}"></script>
+		<script src="{% static 'app/js/extra2.js' %}"></script>
+
+	</body>
+</html>
+<script>
+$(document).ready(function() {
+	// validaciones pregunta 1, por defecto en NO
+	$("#cuestionario1").hide();
+	$("#pregunta2_no").hide();
+	$("#pregunta2_si").hide();
+	$("input[name='superior_anual']").change(function() {
+		var respuesta = $(this).val();
+		if (respuesta === "si") {
+			$("#cuestionario1").show();
+			if (respuesta === "si"){
+				$("#pregunta2_si").hide();
+				$("#pregunta2_no").show();
+				$("#fin_proceso").hide();
+			} else {
+				$("#pregunta2_si").hide();
+				$("#pregunta2_no").show();
+				$("#fin_proceso").hide();
+			}
+		} else{
+			$("#cuestionario1").hide();
+			$("#pregunta2_no").hide();
+			$("#fin_proceso").show();
+			$("#pregunta2_si").hide();
+		}
+	});
+	// validaciones pregunta 2
+	$("input[name='valor_razonable']").change(function() {
+	var respuesta = $(this).val();
+	$("#pregunta2_no").hide();
+	$("#pregunta2_si").hide();
+	$("#pregunta_3").hide();
+
+	if (respuesta === "si") {
+		$("#pregunta2_si").show();
+		$("#pregunta2_no").hide();
+
+	} else if (respuesta === "no") {
+		$("#pregunta2_no").show();
+		$("#pregunta2_si").hide();
+		$("#pregunta_3").show();
+
+	}
+	});
+	// validaciones pregunta 4
+	$("input[name='vp_vr_superior']").change(function() {
+	var respuesta = $(this).val();
+	if (respuesta === "si") {
+		$("#cuestionario1").show();
+		$("#pregunta_5").show();
+		$("#pregunta_2").show();
+		$("#pregunta_1").show();
+		$("#fin_proceso").hide();
+
+		var respuesta2 = $("input[name='valor_razonable']:checked").val();
+		
+		if (respuesta2 === "si") {
+			$("#pregunta2_si").show();
+			$("#pregunta2_no").hide();
+			$("#pregunta_3").hide();
+
+		} else {
+			$("#pregunta2_no").show();
+			$("#pregunta2_si").hide();
+			$("#pregunta_3").show();
+		}
+	} else {
+		$("#cuestionario1").show();
+		$("#fin_proceso").show();
+		$("#pregunta2_no").hide();
+		$("#pregunta2_si").hide();
+		$("#pregunta_5").hide();
+		$("#pregunta_2").hide();
+		$("#pregunta_1").hide();
+		$("#pregunta_3").hide();
+	}
+	});
+	//Validaciones pregunta_2 y pregunta_5 
+	var valorRazonable = $("input[name='valor_razonable']");
+	var opcionCompra = $("input[name='opcion_compra']");
+	opcionCompra.attr("readonly", true);
+
+	valorRazonable.change(function() {
+		var valor = $(this).val();
+		opcionCompra.filter("[value='" + valor + "']").prop("checked", true);
+		if (valor === "no") {
+			opcionCompra.attr("readonly", true);
+		} else if (valor === "si") {
+			opcionCompra.attr("readonly", true);
+		}
+	});
+	
+	
+});
+</script>
