@@ -5,7 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         {% load static %}
-		<link rel="stylesheet" href="{% static 'app/css/tablas.css' %}" />
+		<link rel="stylesheet" href="{% static 'app/css/main2.css' %}" />
 		<link rel="stylesheet" href="{% static 'app/css/noscript.css' %}" />
 	</head>
 	<body class="is-preload">
@@ -18,24 +18,28 @@
                     <article id="intro">
                         <h2 class="major">Reconocimiento Posterior</h2>
                         <section>
-                            <h3 class="major">Gasto Financiero(Intereses)</h3>
+                            <h3 class="major">Pago del arrendamiento</h3>
                                 <div class="table-wrapper">
                                     <table>
                                         <thead>
                                             <tr>
                                                 <th><em>Codigo</em></th>
-                                                <th><em>5305</em></th>
                                                 <th><em>210511</em></th>
+                                                <th><em>2105</em></th>
+                                                <th><em>1110</em></th>
+
                                             </tr>
                                             <tr>
                                                 <th><em>Cuenta</em></th>
-                                                <th><em>Gasto Financiero</em></th>
                                                 <th><em>Interes Derecho a uso</em></th>
+                                                <th><em>Pasivo por derecho a uso</em></th>
+                                                <th><em>Efectivo</em></th>
                                             </tr>
                                             <tr>
                                                 <th>Periodo</th>
                                                 <th>Debe</th>
                                                 <th>Haber</th>
+                                                <th></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -43,7 +47,8 @@
                                             <tr>
                                                 <td>{{ amortizacion.periodo }}</td>
                                                 <td class="format-number">{{ amortizacion.interes|floatformat:2 }}</td>
-                                                <td class="format-number">{{ amortizacion.interes|floatformat:2 }}</td>
+                                                <td class="format-number">{{ amortizacion.amortizacion|floatformat:2 }}</td>
+                                                <td class="format-number">{{ amortizacion.cuota }}</td>
                                             </tr>
                                             {% endfor %}
                                         </tbody>
@@ -51,10 +56,10 @@
                                 </div>
                         </section>
                         <div style="text-align: center;">
-                            <button><a  href="{% url 'tabla3' %}">Atras</a></button>
-                            <button><a href="/">Volver al Inicio</a></button>
-                            <button><a href="{% url 'tablas' %}">Volver a Resultados</a></button>
-                            <button><a  href="{% url 'tabla5' %}">Siguiente</a></button>
+                            <button><a  href="{% url 'tabla4c' %}">Atras</a></button>
+                            <button><a href="/base2/">Volver al Inicio</a></button>
+                            <button><a href="{% url 'tablas2' %}">Volver a Resultados</a></button>
+                            <button><a  href="{% url 'tabla6c' %}">Siguiente</a></button>
                             <button id="imprimirTabla"><a href=""></a>Imprimir Tabla</button>
                         </div>
                     </article>

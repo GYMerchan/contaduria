@@ -6,16 +6,28 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+/* Estilo para ocultar elementos con la clase "no-print" en la vista de impresión */
+@media print {
+	body {
+        color: black !important;
+        background-color: white !important;
+    }
+    section {
+        font-size: 60% !important; /* Añade !important */
+        margin: 30 !important; /* Añade !important */
+        padding: 30 !important; /* Añade !important */
+    }
+}
 .format-number {
 	color: #000;
 }
 th.divider {
-    border-right: 1px solid #fff;
+    border-right: 1px solid #000;
     width: 1px;
     padding: 0;
 }
 td.divider {
-    border-right: 1px solid #fff;
+    border-right: 1px solid #000;
     width: 1px;
     padding: 0;
 }

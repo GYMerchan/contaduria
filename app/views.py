@@ -1075,8 +1075,8 @@ class Tabla2c(TemplateView):
         context['impuesto_diferido'] = impuesto_diferido
         return context
 
-class Tabla3 (TemplateView):
-    template_name = 'app/tabla3.html' 
+class Tabla3c (TemplateView):
+    template_name = 'app/tabla3c.html' 
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -1087,8 +1087,8 @@ class Tabla3 (TemplateView):
         context['depreciaciones'] = depreciaciones
         return context
 
-class Tabla4 (TemplateView):
-    template_name = 'app/tabla4.html'
+class Tabla4c (TemplateView):
+    template_name = 'app/tabla4c.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -1138,8 +1138,8 @@ class Tabla4 (TemplateView):
         context['canon'] = canon
         return context           
 
-class Tabla5 (TemplateView):
-    template_name = 'app/tabla5.html'
+class Tabla5c (TemplateView):
+    template_name = 'app/tabla5c.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -1189,8 +1189,8 @@ class Tabla5 (TemplateView):
         context['canon'] = canon
         return context           
     
-class Tabla6(TemplateView):
-    template_name = 'app/tabla6.html'
+class Tabla6c(TemplateView):
+    template_name = 'app/tabla6c.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -1273,8 +1273,8 @@ class Tabla6(TemplateView):
         context['impuesto_diferido_1'] = impuesto_diferido_1
         return context
     
-class Tabla7(TemplateView):
-    template_name = 'app/tabla7.html'
+class Tabla7c(TemplateView):
+    template_name = 'app/tabla7c.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -1334,8 +1334,8 @@ class Tabla7(TemplateView):
         context['amortizacion_data'] = amortizacion_data
         return context
 
-class Tabla8(TemplateView):
-    template_name = 'app/tabla8.html'
+class Tabla8c(TemplateView):
+    template_name = 'app/tabla8c.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -1449,8 +1449,8 @@ class Tabla8(TemplateView):
         context['impuesto_diferido_1'] = impuesto_diferido_1
         return context
     
-class Tabla9(TemplateView):
-    template_name = 'app/tabla9.html'
+class Tabla9c(TemplateView):
+    template_name = 'app/tabla9c.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -1670,8 +1670,8 @@ class Tabla9(TemplateView):
         context['impuesto_diferido_sit_financiera'] = impuesto_diferido_sit_financiera
         return context
     
-class Tabla10 (TemplateView):
-    template_name = 'app/tabla10.html'
+class Tabla10c (TemplateView):
+    template_name = 'app/tabla10c.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -1734,8 +1734,8 @@ class Tabla10 (TemplateView):
         context['canon'] = canon
         return context 
     
-class Tabla11 (TemplateView):
-    template_name = 'app/tabla11.html'
+class Tabla11c (TemplateView):
+    template_name = 'app/tabla11c.html'
 
-class Tabla12 (TemplateView):
-    template_name = 'app/tabla12.html'
+class Tabla12c (TemplateView):
+    template_name = 'app/tabla12c.html'
