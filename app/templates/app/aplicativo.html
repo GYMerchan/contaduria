@@ -7,6 +7,7 @@
         {% load static %}
 		<link rel="stylesheet" href="{% static 'app/css/main.css' %}" />
 		<link rel="stylesheet" href="{% static 'app/css/noscript.css' %}" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.min.css">
 	</head>
 	<body class="is-preload">
 	<!-- Wrapper -->
@@ -68,7 +69,7 @@
 							<!-- si la respuesta de la pregunta 1 es no, se habilita esta pregunta, de lo contrario queda inhabilitada -->
 							<div class="field" id="pregunta_3">
 								<label for="tasa_incremental_no">3.Cual es la tasa incremental?</label>
-								<input type="text" id="tasa_incremental_no" name="tasa_incremental_no" value="" placeholder="Digite el porcentaje %" />
+								<input type="text" id="tasa_incremental_no" name="tasa_incremental_no" class="numeric-input" value="" placeholder="Digite el porcentaje %" />
 							</div>
 							<div class="field">
 								<label for="{{ form.vp_vr_superior.id_for_label }}">4. El valor presente o valor razonable es superior al umbral de materialidad?</label>
@@ -167,6 +168,7 @@
 		<script src="{% static 'app/js/calculo_si.js' %}"></script>
 		<script src="{% static 'app/js/calculo_no.js' %}"></script>
 		<script src="{% static 'app/js/extra2.js' %}"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.all.min.js"></script>
 
 	</body>
 </html>
@@ -261,7 +263,16 @@ $(document).ready(function() {
 			opcionCompra.attr("readonly", true);
 		}
 	});
-	
+	$(".numeric-input").on("input", function() {
+        // Obtén el valor actual del campo
+        var inputValue = $(this).val();
+
+        // Utiliza una expresión regular para permitir solo números y un punto decimal
+        var numericValue = inputValue.replace(/[^0-9.]/g, "");
+
+        // Establece el valor del campo con los caracteres permitidos
+        $(this).val(numericValue);
+    });
 	
 });
 </script>

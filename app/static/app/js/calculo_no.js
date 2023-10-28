@@ -19,7 +19,7 @@ $(document).ready(function() {
         var csrfToken = $("input[name='csrfmiddlewaretoken']").val();
         var canon = ($("#canon_no").val().replace(/[^0-9.]/g, ""));
         var tiempoArrendamiento = ($("#tiempo_arrendamiento_no").val().replace(/[^0-9.]/g, ""));
-        var tasaImplicta = ($("#tasa_implicita_no").val().replace("%", ""));
+        var tasaImplicta = ($("#tasa_incremental_no").val().replace("%", ""));
         if ((canon) && (tiempoArrendamiento) && (tasaImplicta)) {
                 
             var data = {
@@ -49,7 +49,7 @@ $(document).ready(function() {
 
         }
     }
-    $("#canon_no, #tiempo_arrendamiento_no, #tasa_implicita_no").on("input", CalcularValorRazonable);
+    $("#canon_no, #tiempo_arrendamiento_no, #tasa_incremental_no").on("input", CalcularValorRazonable);
 
     // Obtén referencias a los elementos de entrada
 	const tasaIncrementalInput = document.getElementById("tasa_incremental_no");

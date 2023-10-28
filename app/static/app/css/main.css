@@ -14,12 +14,12 @@
     }
 }
 /* Estilo opcional para personalizar el botón de impresión */
-#imprimirTabla {
-background-color: #007bff;
+/* #imprimirTabla {
+background-color: #00000090;
 color: #fff;
 padding: 10px 20px;
 cursor: pointer;
-}
+} */
 
 .title {
     font-size: 18px; /* Ajusta el tamaño de fuente según tu preferencia */

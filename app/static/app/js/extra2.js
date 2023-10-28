@@ -7,8 +7,11 @@ $(document).ready(function() {
             data: {},
             headers: { "X-CSRFToken": csrftoken },
             success: function(response) {
-                alert("Datos borrados correctamente");
-                toastr.success("Formato no soportado. Solo se permiten .docx y .xlsx");
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Datos borrados',
+                    text: 'Vuelve a diligenciar los datos',
+                });
             },
             error: function(xhr, textStatus, errorThrown) {
                 console.error("Error en la solicitud:", textStatus);

@@ -14,12 +14,12 @@
     }
 }
 /* Estilo opcional para personalizar el botón de impresión */
-#imprimirTabla {
+/* #imprimirTabla {
 background-color: #007bff;
 color: #fff;
 padding: 10px 20px;
 cursor: pointer;
-}
+} */
 
 
 .format-number {
